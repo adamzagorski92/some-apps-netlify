@@ -1,0 +1,29 @@
+.quizButton {
+	width: 100%;
+	padding: 15px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.quizButton:hover {
+	background-color: #0056b3;
+	transform: scale(1.05);
+}
+
+.quizButton:active {
+	background-color: #004494;
+	transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+	.quizButton {
+		font-size: 1rem;
+		padding: 12px;
+	}
+}

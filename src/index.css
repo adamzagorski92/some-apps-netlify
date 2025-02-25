@@ -1,0 +1,49 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	font-size: 16px;
+}
+
+/* Dla przeglądarek opartych na WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+/* Pasek przewijania (track) */
+::-webkit-scrollbar-track {
+	background: #0a0a0a; /* Dopasowane do tła */
+	border-radius: 10px;
+}
+
+/* Suwak (thumb) */
+::-webkit-scrollbar-thumb {
+	background: #007bff; /* Niebieski neonowy kolor */
+	border-radius: 10px;
+	transition: background 0.3s ease-in-out;
+}
+
+/* Suwak na hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #0056b3; /* Ciemniejszy niebieski */
+}

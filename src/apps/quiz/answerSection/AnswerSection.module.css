@@ -1,0 +1,111 @@
+.answerContainer {
+	max-width: 100%;
+	max-height: 80vh;
+	overflow: auto;
+	margin: 30px 20px 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 20px;
+	background: #0a0a0a;
+	box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3), 0 0 20px rgba(0, 123, 255, 0.6);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.answerContainer:hover {
+	box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5), 0 0 25px rgba(0, 123, 255, 0.8);
+}
+
+.answerContainer h1 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.answerContainer h2 {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	color: #00d4ff;
+}
+
+/* Lista odpowiedzi w gridzie */
+.answerList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 kolumny na desktopie */
+	gap: 15px;
+	list-style: none;
+	padding: 0;
+	width: 100%;
+	max-width: 800px;
+}
+
+/* Odpowiedzi jako bloki */
+.answerList li {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	text-align: left;
+}
+
+/* Wyróżnienie poprawnych i błędnych odpowiedzi */
+.answerList li.correct {
+	border-left: 5px solid green;
+	color: green;
+}
+
+.answerList li.incorrect {
+	border-left: 5px solid red;
+	color: red;
+}
+
+/* Styl dla "Your answer:" - nowa linia */
+.answerText {
+	display: block;
+	margin-top: 5px;
+	font-size: 1rem;
+	color: white;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+	.answerList {
+		grid-template-columns: repeat(2, 1fr); /* 2 kolumny na tablecie */
+	}
+}
+
+@media (max-width: 480px) {
+	.answerList {
+		grid-template-columns: repeat(1, 1fr); /* 1 kolumna na smartfonie */
+	}
+}
+
+/* Styl dla przycisku Reset */
+.resetButton {
+	margin-top: 20px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	background: #007bff;
+	color: white;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resetButton:hover {
+	background: #0056b3;
+	transform: scale(1.05);
+}
+
+.resetButton:active {
+	background: #004494;
+	transform: scale(0.98);
+}

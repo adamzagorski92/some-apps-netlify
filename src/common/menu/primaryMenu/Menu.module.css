@@ -1,0 +1,102 @@
+.menuContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px 20px;
+	border-bottom: 2px solid #dddddd1a;
+	background: transparent;
+	position: relative;
+	flex-wrap: wrap; /* Pozwala elementom przeskakiwać do nowego wiersza */
+	gap: 15px; /* Odstęp między elementami */
+}
+
+/* Kontener dla nagłówka (h2 + p) */
+.menuHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+/* Gdy brakuje miejsca – nagłówek na górze, menu na dole */
+@media (max-width: 1024px) {
+	.menuContainer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 10px;
+	}
+
+	.menuHeader {
+		align-items: center;
+	}
+
+	.desktopMenu {
+		order: 2; /* Menu spada na dół */
+		width: 100%;
+	}
+
+	.menuList {
+		justify-content: center; /* Menu na środku */
+		width: 100%;
+	}
+}
+
+/* Ukrywamy menu desktopowe na mobilnych */
+@media (max-width: 768px) {
+	.desktopMenu {
+		display: none;
+	}
+}
+
+/* Lista menu w jednej linii */
+.menuList {
+	display: flex;
+	gap: 20px; /* Odstępy między elementami */
+	list-style: none; /* Usunięcie domyślnych kropek */
+	padding: 0;
+	margin: 0;
+	white-space: nowrap; /* Zapobiega zawijaniu */
+}
+
+/* Elementy menu */
+.menuList li {
+	cursor: pointer;
+	padding: 8px 12px;
+	transition: all 0.3s ease;
+}
+
+/* Linki */
+.menuList li a {
+	text-decoration: none;
+	font-size: 1rem;
+	color: #888;
+	position: relative;
+	padding: 5px 0;
+	transition: color 0.3s ease;
+}
+
+/* Efekt hover */
+.menuList li a:hover {
+	color: #007bff;
+}
+
+/* Animowane podkreślenie */
+.menuList li a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 2px;
+	background-color: #007bff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease-out;
+}
+
+.menuList li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}

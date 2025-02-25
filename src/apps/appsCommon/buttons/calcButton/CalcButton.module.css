@@ -1,0 +1,39 @@
+/* Główny styl dla przycisku */
+.calcBtn {
+	width: 100%;
+	aspect-ratio: 1 / 1; /* Zapewnia kwadratowy kształt */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.1s ease;
+	background: #333; /* Domyślny kolor (ciemnoszary) */
+}
+
+/* Efekt wciśnięcia */
+.calcBtn:active {
+	transform: scale(0.9);
+}
+
+/* Szare przyciski (operatory) */
+.btnGray {
+	background: #a5a5a5;
+	color: black;
+}
+
+/* Czerwony przycisk (C - reset) */
+.btnRed {
+	background: #d32f2f;
+	color: white;
+}
+
+/* Pomarańczowy przycisk ( = ) */
+.btnOrange {
+	background: #ff9500;
+	color: white;
+}

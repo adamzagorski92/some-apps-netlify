@@ -1,0 +1,75 @@
+.memoryCard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.memoryCard:hover {
+	transform: scale(1.05);
+	background-color: #f8f8f8;
+}
+
+.memoryCard:active {
+	transform: scale(0.95);
+}
+
+.memoryCard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative; /* Konieczne dla `::after` */
+	transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Efekt hover */
+.memoryCard:hover {
+	transform: scale(1.05);
+	background-color: #f8f8f8;
+}
+
+.memoryCard:active {
+	transform: scale(0.95);
+}
+
+/* Pseudoelement zakrywający kartę */
+.memoryCard::after {
+	content: '❓';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0);
+	color: red;
+	font-size: 3rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+/* Klasa flipped odsłania kartę (usuwa `::after`) */
+.memoryCard.flipped::after {
+	content: none;
+	opacity: 0;
+	pointer-events: none;
+}

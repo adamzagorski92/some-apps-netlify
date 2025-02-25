@@ -1,0 +1,60 @@
+/* Główny kontener kalkulatora */
+.calcAppContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px;
+	background: #0a0a0a;
+	border-radius: 20px;
+	box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3), /* Zewnętrzna poświata */ 0 0 20px rgba(0, 123, 255, 0.6); /* Subtelna aura wokół */
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.calcAppContainer:hover {
+	box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5), /* Mocniejsza poświata */ 0 0 25px rgba(0, 123, 255, 0.8);
+}
+
+/* Nagłówek */
+.calcAppContainer h1 {
+	color: white;
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+
+/* Kontener całego kalkulatora */
+.calcContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/* Wyświetlacz */
+.displayContainer {
+	width: calc(100% - 10px); /* Dostosowanie do siatki przycisków */
+	background: #bbbbbb;
+	color: black;
+	font-size: 3rem;
+	text-align: right;
+	padding: 15px;
+	border-radius: 15px;
+	margin: 0 auto 10px auto; /* Wycentrowanie i odstęp dolny */
+	box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Siatka przycisków */
+.buttonsContainer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 kolumny */
+	gap: 10px; /* Odstęp między przyciskami */
+	width: 100%;
+	padding: 10px;
+}
+
+.displayContainer p {
+	font-size: 2rem;
+}

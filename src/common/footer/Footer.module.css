@@ -1,0 +1,37 @@
+.footerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end; /* Ustawia zawartość na dole */
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	padding: 15px 20px;
+	background: transparent;
+	border-top: 2px solid #dddddd1a;
+}
+
+.footerText {
+	font-size: 0.9rem;
+	color: #888;
+	margin-bottom: 5px;
+}
+
+.footerContact,
+.footerGithub {
+	font-size: 0.9rem;
+	color: #888;
+	margin-bottom: 5px;
+}
+
+.footerContact a,
+.footerGithub a {
+	color: #007bff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footerContact a:hover,
+.footerGithub a:hover {
+	color: #0056b3;
+}

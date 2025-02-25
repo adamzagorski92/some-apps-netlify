@@ -1,0 +1,35 @@
+.btn {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	padding: 10px 15px;
+	margin-top: 10px;
+
+	border: none;
+	border-radius: 5px;
+
+	background: #007bff; /* Niebieski styl pasujący do linków */
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+	background: #0056b3; /* Ciemniejszy odcień na hover */
+	transform: scale(1.05); /* Subtelne powiększenie */
+}
+
+.btn:active {
+	background: #004494; /* Jeszcze ciemniejszy odcień po kliknięciu */
+	transform: scale(0.98); /* Subtelne pomniejszenie */
+}
+
+.btnGreen {
+	background-color: #28a745; /* Zielony */
+	color: white;
+}

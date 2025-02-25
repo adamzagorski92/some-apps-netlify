@@ -1,0 +1,48 @@
+.quizContainer {
+	max-width: 100%;
+	margin: 30px 20px 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 20px;
+	background: #0a0a0a; /* Bardzo ciemne tło, pasujące do czarnego */
+	box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3), /* Zewnętrzna poświata */ 0 0 20px rgba(0, 123, 255, 0.6); /* Subtelna aura wokół */
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.quizContainer:hover {
+	box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5), /* Mocniejsza poświata */ 0 0 25px rgba(0, 123, 255, 0.8);
+}
+
+.quizContainer h1 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.quizContainer h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.quizContainer p {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+}
+
+.quizButtonsContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+	width: 100%;
+	max-width: 400px;
+	margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+	.quizButtonsContainer {
+		grid-template-columns: repeat(1, 1fr); /* Jeden przycisk na linię na małych ekranach */
+	}
+}
