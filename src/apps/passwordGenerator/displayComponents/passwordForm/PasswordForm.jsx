@@ -1,5 +1,5 @@
 import { Button } from '../../../../common/buttons/Button';
-import styles from './Passwordform.module.css';
+import styles from './PasswordForm.module.css';
 
 export const PasswordForm = ({ generatePassword, passwordSettings, setPasswordSettings }) => {
 	const handleChange = e => {
