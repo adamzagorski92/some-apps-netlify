@@ -1,6 +1,5 @@
 import styles from './PasswordGenerator.module.css';
 import { DisplayPassword } from '../displayComponents/password/DisplayPassword';
-
 import { PasswordForm } from '../displayComponents/passwordForm/PasswordForm';
 import { useState } from 'react';
 
