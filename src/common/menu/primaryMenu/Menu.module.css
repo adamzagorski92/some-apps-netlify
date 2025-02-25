@@ -1,7 +1,7 @@
 .menuContainer {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	width: 100%;
 	padding: 10px 20px;
 	border-bottom: 2px solid #dddddd1a;
@@ -23,13 +23,7 @@
 @media (max-width: 1024px) {
 	.menuContainer {
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
 		gap: 10px;
-	}
-
-	.menuHeader {
-		align-items: center;
 	}
 
 	.desktopMenu {
