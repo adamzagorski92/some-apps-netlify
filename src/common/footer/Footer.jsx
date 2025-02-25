@@ -9,7 +9,7 @@ export const Footer = () => {
 			</p>
 			<p className={styles.footerGithub}>
 				GitHub:{' '}
-				<a href='https://github.com/adamzagorski' target='_blank' rel='noopener noreferrer'>
+				<a href='https://github.com/adamzagorski92' target='_blank' rel='noopener noreferrer'>
 					github.com/adamzagorski
 				</a>
 			</p>
